@@ -7,11 +7,12 @@ import Navigation from "./components/Navigation";
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Navigation />
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route component={() => <div>404 not found</div>} />
     </BrowserRouter>
   );
 };
